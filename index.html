@@ -14,10 +14,10 @@
         document.querySelector('a[rel="ar"]').addEventListener('click', function(event) {
             const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
             if (isIOS) {
-                const usdzUrl = 'your-model.usdz'; // Replace with the URL of your USDZ file
+                const usdzUrl = '/Rustic_chair.usdz'; // Replace with the URL of your USDZ file
                 window.location.href = usdzUrl;
             } else {
-                const glbUrl = 'your-model.glb'; // Replace with the URL of your GLB file
+                const glbUrl = '/rustic_chair.glb'; // Replace with the URL of your GLB file
                 const sceneViewerUrl = `intent://arvr.google.com/scene-viewer/1.0?file=${encodeURIComponent(glbUrl)}#Intent;scheme=https;package=com.google.android.googlequicksearchbox;action=android.intent.action.VIEW;end;`;
                 window.location.href = sceneViewerUrl;
             }
