@@ -15,9 +15,7 @@
   <img class="header_logo" src="avroLogo.png"></img>
   <div id="card">
     <model-viewer src="Chair_01.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" shadow-intensity="1">
-      <button class="model-button" data-model-src="Chair_01.glb">Chair</button>
-      <button class="model-button" data-model-src="Mixer_01.glb">Mixer</button>
-      <button class="model-button" data-model-src="Planter_01.glb">Planter</button>
+    
 
       <button slot="ar-button" id="ar-button">
         View in your space
@@ -25,6 +23,19 @@
       <div id="ar-prompt">
         <img src="ar_hand_prompt.png">
       </div>
+        <div class="slider">
+    <div class="slides">
+      <button class="slide selected" onclick="switchSrc(this, 'Chair')" style="background-image: url('../../assets/ShopifyModels/Chair.webp');">
+
+      </button><button class="slide" onclick="switchSrc(this, 'Mixer')" style="background-image: url('../../assets/ShopifyModels/Mixer.webp');">
+
+      </button><button class="slide" onclick="switchSrc(this, 'GeoPlanter')" style="background-image: url('../../assets/ShopifyModels/GeoPlanter.webp');">
+      
+      </button><button class="slide" onclick="switchSrc(this, 'ToyTrain')" style="background-image: url('../../assets/ShopifyModels/ToyTrain.webp');">
+      
+      </button><button class="slide" onclick="switchSrc(this, 'Canoe')" style="background-image: url('../../assets/ShopifyModels/Canoe.webp');">    
+    </button></div>
+  </div>
     </model-viewer>
   </div>
   <script src="script.js"></script>
