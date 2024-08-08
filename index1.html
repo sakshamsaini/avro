@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Avro Furniture</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="demo-styles.css" />
+  <script type="module" src="https://unpkg.com/@google/model-viewer"></script>
+  <script src="https://unpkg.com/focus-visible/dist/focus-visible.js" defer></script>
+  <script src="utils.js"></script>
+</head>
+<body>
+  <img class="header_logo" src="avroLogo.png"></img>
+  <div id="card">
+    <model-viewer src="Chair_01.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" shadow-intensity="1">
+      <button class="model-button" data-model-src="Chair_01.glb">Chair</button>
+      <button class="model-button" data-model-src="Mixer_01.glb">Mixer</button>
+      <button class="model-button" data-model-src="Planter_01.glb">Planter</button>
+
+      <button slot="ar-button" id="ar-button">
+        View in your space
+      </button>
+      <div id="ar-prompt">
+        <img src="ar_hand_prompt.png">
+      </div>
+    </model-viewer>
+  </div>
+  <script src="script.js"></script>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+  <script>
+    const modelViewer = document.querySelector("model-viewer");
+    const modelButtons = document.querySelectorAll(".model-button");
+
+    modelButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const newModelSrc = button.dataset.modelSrc;
+        modelViewer.src = newModelSrc;
+      });
+    });
+  </script>
+</body>
+</html>
