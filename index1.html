@@ -45,6 +45,11 @@
                 button.addEventListener('click', function() {
                     const modelViewer = document.getElementById('main-viewer');
                     modelViewer.src = this.getAttribute('data-model-src');
+                    
+                    document.querySelectorAll('.model-button').forEach(btn => {
+                        btn.classList.remove('selected');
+                    });
+                    this.classList.add('selected');
                 });
             });
         });
@@ -148,15 +153,20 @@
         display: flex;
         justify-content: center;
         margin-top: 20px;
+        padding-bottom: 20px;
     }
 
     .model-button {
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 60px;
         margin: 0 10px;
         border: none;
-        border-radius: 8px;
+        border-radius: 15px;
         cursor: pointer;
+    }
+
+    .model-button.selected {
+        outline: 2px solid blue;
     }
 
     .model-button:active {
