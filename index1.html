@@ -24,32 +24,22 @@
       </div>
         <div class="slider">
     <div class="slides">
-      <button class="slide selected" onclick="switchSrc(this, 'Chair')" style="background-image: url('../../assets/ShopifyModels/Chair.webp');">
+      <button class="slide selected" onclick="switchSrc(this, 'Chair')">
 
-      </button><button class="slide" onclick="switchSrc(this, 'Mixer')" style="background-image: url('../../assets/ShopifyModels/Mixer.webp');">
+      </button><button class="slide" onclick="switchSrc(this, 'Mixer')" >
 
-      </button><button class="slide" onclick="switchSrc(this, 'GeoPlanter')" style="background-image: url('../../assets/ShopifyModels/GeoPlanter.webp');">
+      </button><button class="slide" onclick="switchSrc(this, 'GeoPlanter')">
       
-      </button><button class="slide" onclick="switchSrc(this, 'ToyTrain')" style="background-image: url('../../assets/ShopifyModels/ToyTrain.webp');">
+      </button><button class="slide" onclick="switchSrc(this, 'ToyTrain')">
       
-      </button><button class="slide" onclick="switchSrc(this, 'Canoe')" style="background-image: url('../../assets/ShopifyModels/Canoe.webp');">    
+      </button><button class="slide" onclick="switchSrc(this, 'Canoe')">    
     </button></div>
   </div>
     </model-viewer>
   </div>
   <script src="script.js"></script>
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
-  <script>
-    const modelViewer = document.querySelector("model-viewer");
-    const modelButtons = document.querySelectorAll(".model-button");
-
-    modelButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const newModelSrc = button.dataset.modelSrc;
-        modelViewer.src = newModelSrc;
-      });
-    });
-  </script>
+ 
 <style>
   .slider {
     width: 100%;
